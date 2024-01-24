@@ -1,0 +1,2 @@
+
+  // Makuuhuone: sänky ja kelloradio

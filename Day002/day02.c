@@ -7,9 +7,11 @@
 
 int main()
 {
-  // Ternary operations
-  // (expression_compare)
-  /*bool rainfall = false;
+
+  /*
+  //Ternary operations
+ // (expression_compare)
+  bool rainfall = false;
 
   (rainfall == true) ? (printf("It is raining!")) : (printf("No rain !"));
 
@@ -25,9 +27,9 @@ int main()
   int age = 0;
   printf("Tell me your age:\n");
   scanf("%d", &age);
-  printf("You are %s", (age >= 18) ? "adult" : "minor");
+  //printf("You are %s", (age >= 18) ? "adult" : "minor");
 
-  // (age >= 18) ? (printf("Your are  Adult\n")) : (printf("Your are minor"));
+  (age >= 18) ? (printf("Your are  Adult\n")) : (printf("Your are minor"));
 
   // bitwise operations
 
@@ -41,18 +43,17 @@ int main()
   else
   {
     printf("\n a < b");
-  }*/
+  }
 
   // modulo
 
-  // int a = 9, b = 5;
-  // printf("\nmodule:%d", a%b);
+  int a = 9, b = 5;
+  printf("\nmodule:%d", a%b);
 
   // Task 03:
   // Ask a number from user.
   // explain if it is an even or odd number.
 
-  /*
     int number = 0;
     printf("Give me a number:\n");
     scanf("%d", &number);
@@ -88,6 +89,13 @@ int main()
     printf("C is largest");
   }
 
+  // using ternary operations
+  if (a >= b){
+    (a >= c) ? printf("A is biggest") : printf("C is biggest");
+  } else {
+    (b >= c) ? printf("B is biggest") : printf("C is biggest");
+  }
+
   // Task 05:
   // && AND , || OR , ! NOT
 
@@ -106,7 +114,9 @@ int main()
   }
 
 
-  //Switch
+//Switch case
+
+
   int variable = 9;
   switch (variable){
     case 1: printf("Eka");
@@ -120,8 +130,18 @@ int main()
     default:
     printf("joku muu");
     break;
-
   }
+
+
+
+
+
+
+
+
+
+
+
 
 // Task 06:
   // Vaatteiden valinta
@@ -141,64 +161,34 @@ int main()
   // muuten ei osata neuvoa.
 
   int fahrenheit = 0;
-  float Celsius = 0;
+  float celsius = 0;
   int asteet = 0;
   bool sade = true;
 
   char asia;
-  scanf("");
+  scanf("%c", &asia);
+  printf("%c", asia);
+  if  (asia == 'k'){
+    sade = true;
+  } else {
+    sade = false;
+  }
 
-  Celsius = fahrenheit;
-  printf(" lampotilaCelsius %d");
+  celsius = fahrenheit;
+  //printf(" lampotilaCelsius %d");
 
   printf("Anna Lämpötila fahrenheitteina:\n");
   scanf("%d", &fahrenheit);
-  Celsius = (fahrenheit - 32) / 1.8;
-  prinf(" ")
+  celsius = (fahrenheit - 32) / 1.8;
+  printf("\n asteet: %d celsius:%f fahrenheit: %d\n", asteet, celsius, fahrenheit);
       // printf(" Celsius is %f:\n", Celsiusasteiksi);
 
-  printf("Sataako ");
-  printf("Sataako (1=kyllä, 0=ei): ");
-  scanf("%d", &sade);
-
-  printf(" Saatako vettä:");
-  scanf("%c", &saatako);
-  if (sataako == true)
-    switch (lampotilaCelsius)
-    {
-    case 25....30:
-      printf(" ");
-    }
-
-  printf(" Asteet Ceslcius asteina:%d astetta\n", lampotilaCelsius);
-  printf(" Satako:%d\n", saatako);
-
-  switch (lampotilaCelsius)
-  {
-  case 25...30:
-    printf(" kes") if (saatako == true)
-        printf("");
-  }
-  else printf("kesähattu ja aurinkolasit");
+  //printf("Sataako ");
+  //printf("Sataako (1=kyllä, 0=ei): ");
+  //scanf("%d", &sade);
 
 
-  int fahrenheit = 0;
-  float celsius = 0;
-  int asteet = 0;
-  bool sataa = false;
-
-  char asia;
-  scanf("%c", &asia);
-  printf("%c", asia);
-  if (asia == 'k')
-  {
-    sataa = true;
-  }
-  else
-  {
-    sataa = false;
-  }
-
+  
   celsius = (fahrenheit - 32) / 1.8;
   asteet = celsius;
   printf("\nasteet: %d celsius: %f fahrenheit: %d\n", asteet, celsius, fahrenheit);
@@ -206,13 +196,13 @@ int main()
   switch (asteet)
   {
   case 25 ... 30:
-    printf("Kesähattu %s", sataa ? "" : " ja aurinkolasit");
+    printf("Kesähattu %s", sade ? "" : " ja aurinkolasit");
     break;
   case 20 ... 24:
     printf("Kesävaatteet");
     break;
   case 10 ... 19:
-    printf("%s", sataa ? "Sadevaatteet" : "Kesävaatteet");
+    printf("%s", sade ? "Sadevaatteet" : "Kesävaatteet");
     break;
   case 0 ... 9:
     printf("Lämpimät vaatteet");
@@ -229,7 +219,7 @@ while (iter < 5){
 printf(" %d\n", ++iter);
 //iter++;
 }
-
+*/
 // Task 07:
 // Iterate rocket launch as
 //      5
@@ -240,7 +230,7 @@ printf(" %d\n", ++iter);
 //      BOOM!
 // use do - while
 // then use while
-
+/*
 int launch = 5;
 while (launch > 0){
   printf("\n%d",launch);
@@ -276,7 +266,7 @@ do {
   do
   {
     printf("%d\n", countDown);
-    //sleep(1);
+    sleep(1);
     countDown--;
   } while (0 < countDown);
   printf("BOOM!\n");
@@ -289,7 +279,7 @@ do {
   while (0 < countDown)
   {
     printf("%d\n", countDown);
-    //sleep(1);
+    sleep(1);
     countDown--;
   }
   printf("BOOM!\n");
@@ -313,8 +303,6 @@ printf("%d %f\n",bb,bb);
 // robin hood on dooh nidor
 
 char nimi[10]= "Robin hood";
-
-
 //string length
 int len = strlen(nimi);
 
@@ -326,7 +314,13 @@ for (int i = 0, j = len-1; i <= j; i++, j--){
   nimi[j] = c;
 }
 printf("Väärinpäin Robin Hood on:%s\n", nimi);
-*/
+
+
+char nimi [10] = "robin hood";
+for (int i = 10; i >= 0; i --){
+  printf("%c", nimi[i]);
+}
+
 // Lisätehtävä:
 // tee for looppi, joka käy läpi char arrayn
 // "clever brown fox jumped over lazy dog"
@@ -349,22 +343,16 @@ printf("Väärinpäin Robin Hood on:%s\n", nimi);
  printf("Kontako määrä on:%d\n", kontako);
 
 
-char nimi [10] = "robin hood";
-for (int i = 10; i >= 0; i --){
-  printf("%c", nimi[i]);
-}
-
-
 int a = 0, e= 0, i = 0, o = 0, u = 0;
 char text [37] = "";
 for (int iter = 0; iter < 37; iter++){
   if (text[iter] == 'a') {a++;} 
-  if (text[iter] == 'a') {a++;}
-   if (text[iter] == 'a') {a++;}
-    if (text[iter] == 'a') {a++;}
-     if (text[iter] == 'a') {a++;}
+  if (text[iter] == 'e') {e++;}
+  if (text[iter] == 'i') {i++;}
+  if (text[iter] == 'o') {o++;}
+  if (text[iter] == 'u') {u++;}
 
-}
+}*/
 /*
 Piirrä joulukuusi, jonka korkeus on X ja varsi Y. 
 Kun saat ohjelman toimimaan, tee versio, joka kysyy X ja Y arvot.
@@ -374,9 +362,8 @@ Kun saat ohjelman toimimaan, tee versio, joka kysyy X ja Y arvot.
 *******
    *
    *
-*/
-int korkeus = 0;
 
+int korkeus = 0;
 
 printf("Anna Korkeus:\n");
 scanf("%d", &korkeus);
@@ -394,20 +381,48 @@ for (int i = 1; i<=korkeus; i++){
 }
 
 for (int i = 0; i < 2; i++){
-  for (int j = 0; j < korkeus; j++)
+  for (int j = 1; j < korkeus; j++)
   printf(" ");
   printf("*\n");
 }
-
-/*
-int height = 6;
-int base = 4;
-int count = 4;
-
-printf("\n");
-for (int iter = 0; iter < count; iter++){
-  for
-}
 */
+
+int korkeus = 6;
+int runko = 4;
+int lukumaara = 4;
+printf("\n");
+for (int iter = 0; iter < korkeus; iter++){
+     for (int lkm = 0; lkm <lukumaara; lkm++){
+       for (int iter2 = 0; iter2 < korkeus - iter; iter2++)\
+       printf("%c",' ');
+     
+
+     int dummy = 1 + (iter*2);
+     for (int iter3 = 0; iter3 < dummy; iter3++){
+      printf("%c",'*');
+     }
+     
+     for (int iter2 = 0; iter2 < korkeus-iter; iter2++){
+      printf("%c", ' ');
+     }
+}
+ // vahihda rivi 
+ printf("\n");
+}
+for (int iter4=0; iter4 < runko; iter4++) {
+    for (int lkm = 0; lkm < lukumaara; lkm++) {
+        for (int iter5=0; iter5 < korkeus; iter5++) {
+            printf("%c",' ');
+        }
+
+        printf("%c",'*');
+
+        for (int iter5=0; iter5 < korkeus; iter5++) {
+            printf("%c",' ');
+        }
+
+    }
+    printf("\n");
+}
  return 0;
 }
